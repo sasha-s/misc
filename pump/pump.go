@@ -8,6 +8,7 @@ type Pump struct {
 	blockSize int
 }
 
+// New creates a new pump.
 func New(blockSize int, numBlocks int) Pump {
 	toWrite := make(chan Interval, numBlocks)
 	for i := 0; i < numBlocks; i++ {
