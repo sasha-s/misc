@@ -8,7 +8,7 @@ import (
 	lfc "github.com/PurpureGecko/go-lfc"
 )
 
-const n = 10
+const n = 16
 
 var blockSize = 1024 * 16
 var numBlocks = 128 / 4
