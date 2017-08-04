@@ -66,6 +66,7 @@ func (p Pump) CommitRead(b Interval) {
 	p.toWrite <- b
 }
 
-func (p Pump) CancelRead(b Interval) {
-	p.toRead <- b
+func (p Pump) CancelWrite(b Interval) {
+	b.End = b.Start + p.blockSize
+	p.toWrite <- b
 }
